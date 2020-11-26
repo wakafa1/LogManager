@@ -1,0 +1,30 @@
+<% provide(:title, '注册') %>
+<h1>注册</h1>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <%- if @user.errors.full_messages.present? %>
+      <div id="error_explanation">
+        <div class="alert alert-danger">
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    <% end -%>
+
+    <%= form_for(@user) do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+      <%= f.submit "创建账户" %>
+    <% end %>
+  </div>
+</div>
