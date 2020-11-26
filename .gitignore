@@ -20,4 +20,8 @@
 # Ignore Byebug command history file.
 .byebug_history
 
+# Ignore IDEA temp files
 /.idea
+
+# Ignore uploaded files
+/public/uploads
