@@ -1,3 +1,4 @@
+<h1>Log Profile</h1>
 <table>
   <tr>
     <td>Filename: <%= @current_log.filename %></td>
@@ -8,10 +9,15 @@
   <tr>
     <td>Created at: <%= @current_log.created_at %></td>
   </tr>
+  <tr height="30px">
+    <td></td>
+  </tr>
   <tr>
+    <td></td>
     <td><%= button_to "parse", {:controller => 'log', :action => 'parse', :id => @current_log.id}, :method => 'post' %></td>
   </tr>
   <tr>
+    <td>Default: All</td>
     <td><%= button_to "show", {:controller => 'log', :action => 'show', :id => @current_log.id}, :method => 'post' %></td>
   </tr>
 </table>
