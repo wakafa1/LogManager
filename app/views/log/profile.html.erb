@@ -11,4 +11,7 @@
   <tr>
     <td><%= button_to "parse", {:controller => 'log', :action => 'parse', :id => @current_log.id}, :method => 'post' %></td>
   </tr>
+  <tr>
+    <td><%= button_to "show", {:controller => 'log', :action => 'show', :id => @current_log.id}, :method => 'post' %></td>
+  </tr>
 </table>

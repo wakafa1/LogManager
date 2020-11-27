@@ -11,4 +11,5 @@ Rails.application.routes.draw do
 
   get '/log', to: 'log#profile'
   post '/log/parse', to: 'log#parse'
+  post '/log/show', to: 'log#show'
 end

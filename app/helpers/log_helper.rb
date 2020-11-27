@@ -29,4 +29,9 @@ module LogHelper
     log.parsed = true
     log.save
   end
+
+  def extract_data(log)
+    @datasets = Datapoint.where(log: log)
+    return @datasets
+  end
 end

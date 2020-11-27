@@ -1,0 +1,17 @@
+<h1>Logs</h1>
+<table>
+  <tr>
+    <th>Time</th>
+    <th>data</th>
+  </tr>
+  <% @datesets.each do |datapoint| %>
+    <tr>
+      <td>
+        <%= datapoint['time'] %>
+      </td>
+      <td align="right">
+        <%= datapoint['data'] %>
+      </td>
+    </tr>
+  <% end %>
+</table>

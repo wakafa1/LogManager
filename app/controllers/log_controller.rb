@@ -18,4 +18,9 @@ class LogController < ApplicationController
     end
     parse_log @current_log
   end
+
+  def show
+    @current_log = Log.find(params[:id])
+    @datesets = extract_data @current_log
+  end
 end
