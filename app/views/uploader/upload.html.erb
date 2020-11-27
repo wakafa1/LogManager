@@ -1,3 +1,7 @@
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>"><%= value %></div>
+<% end %>
+
 <%= form_tag({action: :do_upload}, multipart: true) do %>
   <%= file_field_tag 'logfile' %>
   <%= submit_tag '运行' %>

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   get 'logout', to: 'sessions#destroy'
 
-  get '/upload', to: "uploader#upload"
+  get '/upload', to: 'uploader#upload'
   post '/upload/done', to: 'uploader#do_upload', as: 'loader'
+
+  get '/log', to: 'log#profile'
 end
