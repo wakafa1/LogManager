@@ -33,6 +33,7 @@ class UploaderController < ApplicationController
     @log = Log.new
     @log.filename = @upload_filename
     @log.user = current_user
+    @log.parsed = false
     @log.save
   end
 end
