@@ -8,4 +8,14 @@
       </h1>
     </section>
   </aside>
+  <table>
+    <tr>
+      <th>Logs</th>
+    </tr>
+    <% @user.logs.each do |log| %>
+      <tr>
+        <td><%= log.filename %><tr>
+      </tr>
+    <% end %>
+  </table>
 </div>
