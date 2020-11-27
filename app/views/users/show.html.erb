@@ -14,7 +14,9 @@
     </tr>
     <% @user.logs.each do |log| %>
       <tr>
-        <td><%= log.filename %><tr>
+        <td>
+          <%= link_to(log.filename, {:controller =>'log', :action => 'profile', :id => log.id})%>
+        </td>
       </tr>
     <% end %>
   </table>
