@@ -1,7 +1,30 @@
+<% provide(:title, "Show Log") %>
+</br></br></br></br>
+
+<div class="container">
 <h1>Logs</h1>
 
 <%= javascript_include_tag 'echarts.min.js'%>
 <div id="main" style="width: 1000px;height:600px;"></div>
+
+<table>
+  <tr>
+    <th>Time</th>
+    <th>data</th>
+  </tr>
+  <% @datesets.each do |datapoint| %>
+    <tr>
+      <td>
+        <%= datapoint['time'] %>
+      </td>
+      <td align="right">
+        <%= datapoint['data'] %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+</div>
+
 <script type="text/javascript">
     // based on prepared DOM, initialize echarts instance
     var myChart = echarts.init(document.getElementById('main'));
@@ -82,20 +105,3 @@
     // 使用刚指定的配置项和数据显示图表。
     myChart.setOption(option);
 </script>
-
-<table>
-  <tr>
-    <th>Time</th>
-    <th>data</th>
-  </tr>
-  <% @datesets.each do |datapoint| %>
-    <tr>
-      <td>
-        <%= datapoint['time'] %>
-      </td>
-      <td align="right">
-        <%= datapoint['data'] %>
-      </td>
-    </tr>
-  <% end %>
-</table>

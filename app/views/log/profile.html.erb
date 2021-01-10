@@ -1,3 +1,6 @@
+<% provide(:title, "Profile") %>
+<br/><br/><br/><br/>
+<div class="container">
 <h1>Log Profile</h1>
 <table>
   <tr>
@@ -21,3 +24,4 @@
     <td><%= button_to "show", {:controller => 'log', :action => 'show', :id => @current_log.id}, :method => 'post' %></td>
   </tr>
 </table>
+</div>
